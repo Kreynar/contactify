@@ -1,0 +1,53 @@
+.footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.left-container {
+  flex-basis: 38%;
+  padding: 10px 10px 15px 40px;
+
+  .copyright-line {
+    margin-top: 20px;
+
+    .copyright-icon {
+      font-size: 0.6rem;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+
+  .about {
+    margin-left: 15px;
+  }
+
+  .privacy {
+    margin-left: 15px;
+  }
+}
+
+.middle-container {
+  flex-basis: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .middle-inner-container {
+    display: flex;
+    flex-basis: 49.5%;
+    background-color: rgba(0, 0, 0, 0.301);
+  }
+}
+
+.right-container {
+  flex-basis: 24%;
+}
+
+a {
+  color: white;
+}

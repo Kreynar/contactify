@@ -1,0 +1,72 @@
+@import "../../styles.scss";
+
+.filter-bar-container {
+  display: flex;
+  height: 70px;
+  color: white;
+
+  .name-input-container {
+    flex-basis: 18%;
+    margin: auto 0 auto 30px;
+  }
+
+  .city-input-container {
+    flex-basis: 14%;
+    margin: auto 0 auto 0;
+  }
+
+  .active-checkbox-container {
+    flex-basis: 10%;
+    margin: auto 0 auto 0;
+    min-width: 120px;
+  }
+
+  .filter-button-container {
+    flex-basis: 10%;
+    margin: auto 0 auto 0;
+
+    .filter-button {
+      @extend .button-style-reset;
+      border-radius: 25px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      padding: 9px 20px;
+      font-weight: 600;
+    }
+  }
+
+  .add-contract-button-container {
+    flex-basis: 40%;
+    display: flex;
+    margin: auto 45px auto auto;
+    justify-content: flex-end;
+
+    .add-contract-button {
+      @extend .button-style-reset;
+      background-color: #018a8a;
+      font-weight: 600;
+      display: flex;
+      border-radius: 25px;
+      padding: 10px;
+
+      .plus-circle-container {
+        color: rgb(0, 87, 87);
+        border-radius: 25px;
+        height: 20px;
+        width: 20px;
+        font-size: 1.5rem;
+        background-color: white;
+        border-radius: 25px;
+
+        .plus-circle-inner-container {
+          position: relative;
+          top: -3px;
+          left: -1px;
+        }
+      }
+
+      .add-contract-text-container {
+        margin: auto 10px auto 20px;
+      }
+    }
+  }
+}

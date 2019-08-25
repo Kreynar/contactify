@@ -11,6 +11,7 @@
 .left-container {
   flex-basis: 38%;
   padding: 10px 10px 15px 40px;
+  line-height: 2;
 
   .copyright-line {
     margin-top: 20px;
@@ -41,11 +42,37 @@
     display: flex;
     flex-basis: 49.5%;
     background-color: rgba(0, 0, 0, 0.301);
+
+    .center {
+      margin: auto;
+    }
+
+    .big-icon {
+      font-size: 2rem;
+      flex-basis: 15%;
+      text-align: center;
+    }
+
+    .last-synced-container {
+      flex-basis: 55%;
+    }
+
+    .force-sync-line {
+      flex-basis: 30%;
+      text-align: center;
+    }
+
+    .help-desk-container {
+      flex-basis: 85%;
+      margin: auto;
+    }
   }
 }
 
 .right-container {
   flex-basis: 24%;
+  padding: 15px 10px 10px 25px;
+  line-height: 2;
 }
 
 a {

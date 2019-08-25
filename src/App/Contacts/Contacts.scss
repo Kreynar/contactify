@@ -1,0 +1,11 @@
+.users-view-container {
+  display: flex;
+
+  .card-container {
+    flex-basis: 20%;
+  }
+
+  .table-container {
+    flex-basis: 80%;
+  }
+}

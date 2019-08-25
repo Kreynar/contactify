@@ -1,0 +1,40 @@
+.user-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 250px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+
+  .user-photo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 5px solid lightgray;
+    margin: 10px auto 10px auto;
+  }
+
+  .user-details-container {
+    display: flex;
+
+    .keys-container {
+      display: flex;
+      flex-direction: column;
+      color: rgba(0, 0, 0, 0.5);
+      flex-basis: 40%;
+
+      .key-container {
+        text-align: right;
+      }
+    }
+
+    .values-container {
+      .value-container {
+        text-align: left;
+        flex-basis: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.name-row {
+  flex-basis: 20%;
+}
+
+.surname-row {
+  flex-basis: 15%;
+}
+
+.city-row {
+  flex-basis: 15%;
+}
+
+.email-row {
+  flex-basis: 25%;
+}
+
+.phone-row {
+  flex-basis: 15%;
+}
+
+.edit-row {
+  flex-basis: 10%;
+}
+
+.users-table-container {
+  .users-table {
+    border-collapse: collapse;
+
+    .table-header {
+      color: white;
+      display: flex;
+
+      .name-header {
+        background-color: rgb(1, 134, 165);
+        flex-basis: 20%;
+      }
+
+      .surname-header {
+        background-color: rgb(3, 144, 174);
+        flex-basis: 15%;
+      }
+
+      .city-header {
+        background-color: rgb(8, 153, 184);
+      }
+
+      .email-header {
+        background-color: rgb(14, 173, 203);
+      }
+
+      .phone-header {
+        background-color: rgb(17, 182, 212);
+      }
+
+      .edit-header {
+        background-color: rgb(21, 192, 222);
+      }
+    }
+  }
+}

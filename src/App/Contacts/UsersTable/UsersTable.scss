@@ -9,34 +9,34 @@
 .name-cell-base {
   @extend .cell-base;
   padding-left: 50px;
-  flex-basis: 13%;
+  flex-basis: 15%;
 }
 
 .surname-cell-base {
   @extend .cell-base;
-  flex-basis: 15%;
+  flex-basis: 16%;
 }
 
 .city-cell-base {
   @extend .cell-base;
-  flex-basis: 15%;
+  flex-basis: 16%;
 }
 
 .email-cell-base {
   @extend .cell-base;
-  flex-basis: 23%;
+  flex-basis: 25%;
 }
 
 .phone-cell-base {
   @extend .cell-base;
-  flex-basis: 16%;
+  flex-basis: 18%;
   text-align: right;
   padding-right: 10px;
 }
 
 .edit-cell-base {
   @extend .cell-base;
-  flex-basis: 9%;
+  flex-basis: 10%;
 }
 
 .header-base {

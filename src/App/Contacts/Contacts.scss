@@ -12,4 +12,12 @@
     flex-grow: 1;
     margin-right: 45px;
   }
+
+  .no-users-found {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }

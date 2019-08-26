@@ -3,7 +3,7 @@
   flex-direction: column;
   background-color: white;
   width: 250px;
-  border-radius: 5px;
+  border-radius: 7px;
   padding-bottom: 30px;
 
   .user-photo {
@@ -18,22 +18,29 @@
 
   .user-details-container {
     display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
 
-    .keys-container {
+    .key-value-container {
       display: flex;
-      flex-direction: column;
-      color: rgba(0, 0, 0, 0.5);
-      flex-basis: 40%;
+      line-height: 1.9rem;
 
-      .key-container {
+      .key {
+        color: rgba(0, 0, 0, 0.5);
         text-align: right;
+        flex-basis: 40%;
+        padding-right: 5px;
       }
-    }
 
-    .values-container {
-      .value-container {
+      .value {
         text-align: left;
         flex-basis: 60%;
+        word-wrap: break-word;
+        max-width: 130px;
+
+        a {
+          color: rgb(14, 173, 203);
+        }
       }
     }
   }

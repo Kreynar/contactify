@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './UsersTable.scss';
 
-const UsersTable = () =>
+const UsersTable = ({
+  contacts,
+  selectedContactId,
+  onContactSelect
+}) =>
 <div className='users-table-container'>
-  <table className="users-table">
-    <tr className='table-header'>
-      <th className='name-header'>Name</th>
-      <th className='surname-header'>Surname</th>
-      <th className='city-header'>City</th>
-      <th className='email-header'>Email</th>
-      <th className='phone-header'>Phone</th>
-      <th className='edit-header'></th>
-    </tr>
-  </table>
+  <div className="users-table">
+    <div className='table-headers'>
+      <div className='name-header'>Name</div>
+      <div className='surname-header'>Surname</div>
+      <div className='city-header'>City</div>
+      <div className='email-header'>Email</div>
+      <div className='phone-header'>Phone</div>
+      <div className='edit-header'></div>
+    </div>
+    {contacts.map(contact =>
+      <div className={`table-row ${selectedContactId === contact.id ? 'table-row-highlighted' : null}`}
+           onClick={() => onContactSelect(contact.id)}
+           key={contact.id}>
+        <div className='name-cell'>
+          <div className='active'>
+            {contact.active
+            ? <i className="far fa-eye"></i>
+            : <i className="far fa-eye-slash"></i>}
+          </div>
+          {contact.name}
+        </div>
+        <div className='surname-cell'>{contact.surname}</div>
+        <div className='city-cell'>{contact.city}</div>
+        <div className='email-cell'>{contact.email}</div>
+        <div className='phone-cell'>{contact.phone}</div>
+        <div className='edit-cell'>
+          <div className={`util-container ${selectedContactId === contact.id && 'util-container-highlighted'}`}>
+            <i className="fas fa-pencil-alt"></i>
+          </div>
+          <div className={`util-container ${selectedContactId === contact.id && 'util-container-highlighted'}`}>
+            <i className="fas fa-trash-alt"></i>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
 </div>
 
-export default UsersTable;
+export default memo(UsersTable);

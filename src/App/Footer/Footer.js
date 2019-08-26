@@ -12,25 +12,25 @@ const Footer = () =>
     <div><a href='#'>Contacts</a></div>
     <div><a href='#'>Notifications</a></div>
     <div className='copyright-line'>
-      <i class="far fa-copyright copyright-icon"></i> 2015 Contactify
+      <i className="far fa-copyright copyright-icon"></i> 2015 Contactify
       <a href='#' className='about'>About</a>
       <a href='#' className='privacy'>Privacy</a>
     </div>
   </div>
   <div className='middle-container'>
     <div className='middle-inner-container'>
-      <div className='center big-icon'><i class="fas fa-cloud-upload-alt"></i></div>
+      <div className='center big-icon'><i className="fas fa-cloud-upload-alt"></i></div>
       <div className='center last-synced-container'>
         <div>Last synced:</div>
         <div>{MOCK_LAST_SYNC_DATE}</div>
       </div>
       <div className='center force-sync-line'>
-        <i class="fas fa-sync-alt"></i>
+        <i className="fas fa-sync-alt"></i>
         <a href='#'>Force sync</a>
       </div>
     </div>
     <div className='middle-inner-container'>
-      <div className='center big-icon'><i class="fas fa-stethoscope"></i></div>
+      <div className='center big-icon'><i className="fas fa-stethoscope"></i></div>
       <div className='help-desk-container'>
         <div>Help desk and Resolution center available:</div>
         <div>{HELP_DESK_AVAILABLE_TIME}</div>

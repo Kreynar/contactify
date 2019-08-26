@@ -29,7 +29,7 @@ const Header = ({ selectedTab, onTabSelect }) =>
   </div>
   <div className='search-container'>
     <Input placeholder='Search' />
-    <button className='search-button'><i class="fas fa-search"></i></button>
+    <button className='search-button'><i className="fas fa-search"></i></button>
     
   </div>
 </div>

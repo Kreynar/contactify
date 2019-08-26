@@ -1,60 +1,155 @@
-.name-row {
-  flex-basis: 20%;
+.cell-base {
+  margin: auto auto auto 0;
+  padding-left: 10px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  min-height: 20px;
 }
 
-.surname-row {
+.name-cell-base {
+  @extend .cell-base;
+  padding-left: 50px;
+  flex-basis: 13%;
+}
+
+.surname-cell-base {
+  @extend .cell-base;
   flex-basis: 15%;
 }
 
-.city-row {
+.city-cell-base {
+  @extend .cell-base;
   flex-basis: 15%;
 }
 
-.email-row {
-  flex-basis: 25%;
+.email-cell-base {
+  @extend .cell-base;
+  flex-basis: 23%;
 }
 
-.phone-row {
-  flex-basis: 15%;
+.phone-cell-base {
+  @extend .cell-base;
+  flex-basis: 16%;
+  text-align: right;
+  padding-right: 10px;
 }
 
-.edit-row {
-  flex-basis: 10%;
+.edit-cell-base {
+  @extend .cell-base;
+  flex-basis: 9%;
 }
 
-.users-table-container {
-  .users-table {
-    border-collapse: collapse;
+.header-base {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-height: 22px;
+}
 
-    .table-header {
-      color: white;
+.users-table {
+  border-radius: 7px;
+  perspective: 1px;
+  overflow: hidden;
+
+  .table-headers {
+    color: white;
+    display: flex;
+
+    .name-header {
+      @extend .name-cell-base;
+      @extend .header-base;
+      background-color: rgb(1, 134, 165);
+    }
+
+    .surname-header {
+      @extend .surname-cell-base;
+      @extend .header-base;
+      background-color: rgb(3, 144, 174);
+    }
+
+    .city-header {
+      @extend .city-cell-base;
+      @extend .header-base;
+      background-color: rgb(8, 153, 184);
+    }
+
+    .email-header {
+      @extend .email-cell-base;
+      @extend .header-base;
+      background-color: rgb(14, 173, 203);
+    }
+
+    .phone-header {
+      @extend .phone-cell-base;
+      @extend .header-base;
+      background-color: rgb(17, 182, 212);
+    }
+
+    .edit-header {
+      @extend .edit-cell-base;
+      @extend .header-base;
+      background-color: rgb(21, 192, 222);
+    }
+  }
+
+  .table-row {
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+
+    .name-cell {
+      @extend .name-cell-base;
       display: flex;
 
-      .name-header {
-        background-color: rgb(1, 134, 165);
-        flex-basis: 20%;
-      }
-
-      .surname-header {
-        background-color: rgb(3, 144, 174);
-        flex-basis: 15%;
-      }
-
-      .city-header {
-        background-color: rgb(8, 153, 184);
-      }
-
-      .email-header {
-        background-color: rgb(14, 173, 203);
-      }
-
-      .phone-header {
-        background-color: rgb(17, 182, 212);
-      }
-
-      .edit-header {
-        background-color: rgb(21, 192, 222);
+      .active {
+        position: relative;
+        left: -32px;
+        font-size: 0.9rem;
+        max-width: 0;
       }
     }
+
+    .surname-cell {
+      @extend .surname-cell-base;
+    }
+
+    .city-cell {
+      @extend .city-cell-base;
+    }
+
+    .email-cell {
+      @extend .email-cell-base;
+    }
+
+    .phone-cell {
+      @extend .phone-cell-base;
+    }
+
+    .edit-cell {
+      @extend .edit-cell-base;
+      display: flex;
+
+      .util-container {
+        font-size: 0.8rem;
+        border-radius: 6px;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        display: flex;
+        margin-right: 5px;
+
+        i {
+          margin: auto;
+        }
+      }
+
+      .util-container-highlighted {
+        background-color: rgb(17, 182, 212);
+        color: white;
+      }
+    }
+  }
+
+  .table-row-highlighted {
+    background-color: rgb(231, 246, 249);
   }
 }

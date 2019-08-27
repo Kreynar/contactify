@@ -36,11 +36,18 @@ const Contacts = () => {
     cityFilter,
     activeFilter
   });
-  const selectedContact = filteredContacts.find(
-    contact => contact.id === selectedContactId
-  );
+  let selectedContact = filteredContacts.length && filteredContacts[0];
+  if (filteredContacts.length) {
+    if (!filteredContacts.some(filteredContact => filteredContact.id === selectedContactId)) {
+      setSelectedContactId(filteredContacts[0].id);
+    } else {
+      selectedContact = filteredContacts.find(
+        contact => contact.id === selectedContactId
+      ); 
+    }
+  }
   return (
-    <div>
+    <>
       <FilterBar onFilterClick={setFilters}/>
       <div className='users-view-container'>
         {filteredContacts.length
@@ -60,7 +67,7 @@ const Contacts = () => {
         </>
         : <div className='no-users-found'>No users found</div>}
       </div>
-    </div>
+    </>
   );
 }
 
